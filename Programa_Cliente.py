@@ -2,9 +2,9 @@ import socket
 import random
 import time
 
-HOST = 'localhost' #Nome da maquina 
+HOST = 'localhost' #Nome da maquina.
 
-PORTA = 5000 #Porta de conexao 
+PORTA = 5000 #Porta de conexao. 
 
 while True:
     
@@ -12,7 +12,7 @@ while True:
     
     Conn.connect((HOST, PORTA))#Pedindo conexao ao servidor.
 
-    Num = random.randint(1, 10**30)
+    Num = random.randint(1, 10**30)#Criacao aleatoria de um numero de ate 30 casas.
     
     #Num = random.randint(1, 11)#Para testar a condicional caso o numero tenha menos de 10 casas.
 
@@ -20,8 +20,8 @@ while True:
 
     resposta = Conn.recv(1024).decode()#Decode e utlizado para receber a mesagem devidamente. 
 
-    print(resposta)#Mostra a resposta
+    print(resposta)#Mostra a resposta.
 
-    Conn.close()#Fecha a conexao
+    Conn.close()#Fecha a conexao.
 
-    time.sleep(10)#Utilizando a biblioteca time para esperar os 10 segundos ate a proxima conexao
+    time.sleep(10)#Utilizando a biblioteca time para esperar os 10 segundos ate a proxima conexao.
